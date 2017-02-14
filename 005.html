@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>若干秒后不询问自动关闭窗口</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var willClose = true;	//定义一个是否关闭的全局变量
+		// 单击网页
+		function clickBody(){
+			willClose = false;	//单击网页以后，则把变量置为false
+
+		}
+		setInterval(function(){
+			if(willClose){
+				window.close();	
+			}else{
+				willClose = true;
+			}
+		},3000)
+	</script>
+</head>
+<body style="text-align:center" onclick="clickBody()"> 
+		hello world!
+</body>
+</html>
