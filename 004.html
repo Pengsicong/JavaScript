@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>页面载入时等待界面</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function submitForm(){
+			var doing = document.getElementById('doing');	//获取界面的DOM
+			doing.style.display = '';	//取消隐藏
+			self.location.reload();		//重新加载页面来模拟表单的提交
+		}
+	</script>
+</head>
+<body style="text-align:center">	
+	<div id="doing" style="z-index:99; left:0px; top:0px; display:none; width:100%; position:absolute; height:100%; background:gray;">
+		<br><br><br>载入中，请稍等……
+	</div>
+	<p>
+		<input type="button" value="提交表单" onclick="submitForm()">
+	</p>
+</body>
+</html>
