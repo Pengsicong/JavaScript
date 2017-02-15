@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动态加载JavaScript</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		//动态加载Javascript，myjs.js
+		function loadJs(){
+			//得到html的头部DOM
+			var theHead = document.getElementsByTagName('head').item(0);
+			//创建脚本的DOM对象实例
+			var myScript = document.createElement('script');
+			myScript.src = './myjs.js';
+			myScript.type = 'text/javascript';
+			myScript.defer = true;
+			theHead.appendChild(myScript);	把DOM挂载到头部
+		}
+	</script>
+</head>
+<body style="text-align:center">
+	<p>
+		<!-- 定义按钮 -->
+		<input type="button" value="动态加载JS" onclick="loadJs()">
+	</p>
+</body>
+</html>
