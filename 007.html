@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>禁止网页放入框架</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		if(self != top){
+			top.location.href = self.location.href;
+		}
+	</script>
+</head>
+<body style="text-align:center">
+</body>
+</html>
+
+<!-- 在网络上，为了防止网页被随意地引入到别人的框架里，可以通过判断网页是否为最顶层网页来禁止网页被放入框架。
+在窗口框架体系中，top变量是JavaScript引用最顶层框架的最直接办法。如果网页直接在窗口打开，而非一个框架，那么此时的top变量
+等同于window对象，也等同于self对象。所以，top和self是否等同，可以作为网页是否在一个框架中打开的判断标准。 -->
