@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>单击加入收藏夹</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function addFav(){
+			// 为了确保代码的兼容性，对IE和Firefox分别处理
+			if(window.external.AddFavorite){
+				// AddFavorite函数为IE特有的加入收藏夹的函数
+				window.external.AddFavorite('./012.html','JavaScript300实例');
+			}else{
+				// 使用sidebar的addPanel函数加入收藏夹
+				window.sidebar.addPanel('百度','http://www.baidu.com',"");
+			}
+		}
+	</script>
+</head>
+<body style="text-align:center">
+	<a href="javascript:addFav()">单击加入收藏夹</a>
+</body>
+</html>
