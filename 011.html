@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>将网站设为首页</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+			function setMyHomePage(){
+				if (document.all) {
+					// 设置body的style.behavior
+					document.body.style.behavior='url(#default#homepage)';
+					// 设置首页地址
+					document.body.setHomePage('http://www.baidu.com');
+				}
+			}	
+	</script>
+</head>
+<body style="text-align:center">
+	<!-- 设为首页的链接 -->
+	<a href="#" onclick="setMyHomePage()">设为首页</a>
+
+</body>
+</html>
