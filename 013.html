@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>页面加载完毕的判断</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 加载完成以后的回调函数
+		function myOnLoad(){
+			alert('网页加载完毕！')
+		}
+		// 使用window的onload属性进行回调处理
+		window.onload = myOnLoad
+	</script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- window的onload属性是一种事件的回调，他所监视的事件就是网页元素完毕与否。
+因此，利用该属性，可以非常准确地知道网页是否已经加载完毕。 -->
