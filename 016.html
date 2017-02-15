@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>带关闭按钮的右下角图片广告</title>
+	<meta charset="utf-8">	
+	<script type="text/javascript">
+		// 关闭函数
+		function closeAD(){
+			var ad = document.getElementById("ad");
+			ad.style.display = 'none';
+		}
+
+	</script>
+</head>
+<body style="margin 0px; text-align: center">
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div style="width:180px;height:116px;position: fixed;background-color: red;bottom:0px;right:0px; background-color: rgb(201,211,243);" id="ad">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#cfdef4">
+			<tbody>
+				<tr>
+					<td width="90%" valign="middle" height="24"></td>
+					<td width="" valign="middle" align="right">
+					<!-- 定义关闭链接按钮 -->
+					<a title="关闭" onclick="closeAD()" style="cursor: pointer;">X</a>
+					</td>
+				</tr>
+				<tr>
+					<td height="90" colspan="3">
+						<!-- 广告内容，这里用一句话简单替代 -->
+						Hello My AD!
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div>
+</body>
+</html>
